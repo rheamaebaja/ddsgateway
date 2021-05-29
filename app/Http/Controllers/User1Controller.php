@@ -18,6 +18,7 @@
         // private $request;
 
         public $user1Service;
+        
 
         /*
         *
@@ -35,12 +36,12 @@
          */
 
         public function index(){
-          return $this->successResponse($this->user1Service->obtainUsers1());
+          return $this->successResponse($this->user1Service->obtainUsers());
         }
 
         public function add(Request $request)
         {
-            return $this->successResponse($this->user1Service->createUser1($request->all(), Response::HTTP_CREATED));
+            return $this->successResponse($this->user1Service->createUser($request->all(), Response::HTTP_CREATED));
         }
 
         /**
@@ -50,7 +51,7 @@
         
         public function show($id)
         {
-            return $this->successResponse($this->user1Service->obtainUser1($id));
+            return $this->successResponse($this->user1Service->obtainUser($id));
         }
 
         /**
@@ -60,7 +61,7 @@
 
         public function update(Request $request, $id)
         {
-            return $this->successResponse($this->user1Service->editUser1($request->all(), $id));
+            return $this->successResponse($this->user1Service->editUser($request->all(), $id));
         }
 
         /**
@@ -70,7 +71,7 @@
 
         public function delete($id)
         {
-            return $this->successResponse($this->user1Service->deleteUser1($id));
+            return $this->successResponse($this->user1Service->deleteUser($id));
         }
     }
 ?>

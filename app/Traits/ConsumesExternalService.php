@@ -16,10 +16,12 @@
     public function performRequest($method, $requestUrl,$form_params =[],$headers =[])
     {
     // create a new client request
-    $client = new Client(['base_uri' => $this->baseUri,]);
+    $client = new Client(['base_uri' => $this->baseUri,
+    ]);
 
-    if(isset($this->secret)){
-        $headers['Authorization'] = $this->secret;
+        if(isset($this->secret)){
+            
+            $headers['Authorization'] = $this->secret;
     }
 
     // perform the request (method, url, form parameters, headers)

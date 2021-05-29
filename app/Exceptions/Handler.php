@@ -104,5 +104,5 @@ class Handler extends ExceptionHandler
     }
 
     return $this->errorResponse('Unexpected error. Try later', Response::HTTP_INTERNAL_SERVER_ERROR);
-}
+    }
 }
