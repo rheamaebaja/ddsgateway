@@ -35,6 +35,8 @@ $app = new \Dusterio\LumenPassport\Lumen7Application(
 
  $app->configure('auth');
 
+ $app->configure('database');
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
